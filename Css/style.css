@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.game-board{
+    width: 100%;
+    height: 495px;
+    border-bottom: 15px solid rgb(35, 160, 35);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+.menu{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+}
+.start{
+    position: absolute;
+    margin-top: 300px;
+    margin-left: 45%;
+    width: 100px;
+    height: 50px;
+    border-radius: 45px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    background-color: rgb(193, 41, 2);
+    border-color: rgb(193, 41, 2);
+    color: rgb(255, 209, 174);
+    cursor: pointer;    
+}
+.game-over{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.0;
+}
+.game-overA{
+    animation: tela-over 500ms linear;
+    animation-fill-mode: forwards;
+}
+.pipe{
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    
+}
+.pipeA{
+    animation: pipe-animation 1.5s infinite linear;
+}
+.pipeB{
+    animation: pipe-animation 1s infinite linear;
+}
+.pipeC{
+    animation: pipe-animation 750ms infinite linear;
+}
+.mario{
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+.jump{
+    animation: jump 500ms ease-out;
+}
+.clouds{
+    position: absolute;
+    width: 550px;
+    animation: clouds-animation 20s infinite linear;
+}
+.clouds2{
+    position: absolute;
+    width: 550px;
+    right: -550px;
+}
+.clouds3{
+    position: absolute;
+    width: 550px;
+    right: -550px;
+}
+.clouds2A{
+    animation: clouds-animation 20s infinite linear;
+}
+.clouds3A{
+    animation: clouds-animation 20s infinite linear;
+}
+.Restart{
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+    margin-left: 45%;
+    border-radius: 12px;
+    cursor: pointer;  
+    margin-top: -35px;
+}
+.ponto{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 15px;
+    margin-left: 10px;
+    font-size: larger;
+}.maiorPonto{
+    text-align: right;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: -20px;
+    margin-right: 10px;
+    font-size: larger;
+}
+.fade{
+    animation: fadeA 500ms linear;
+    animation-fill-mode: forwards;
+}
+@keyframes pipe-animation{
+    from {
+        right: -80px;
+    }
+    to {
+        right: 100%;
+    }
+}
+@keyframes jump{
+    0%{
+        bottom: 0;
+    }
+    40% {
+        bottom: 180px;
+    }
+    60%{
+        bottom: 180px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+@keyframes clouds-animation{
+    from {
+        right: -550px;
+    }
+    to {
+        right: 100%;
+    }
+}
+@keyframes tela-over{
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fadeA{
+    from{
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    } 
+}
